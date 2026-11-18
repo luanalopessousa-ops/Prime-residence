@@ -1,0 +1,322 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Prime Residence: encontre o imóvel ideal para você. Projeto demonstrativo de imobiliária premium.">
+
+    <title>Prime Residence | Imóveis Premium</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <h1>Prime Residence</h1>
+            <span>IMÓVEIS PREMIUM</span>
+        </div>
+
+        <nav aria-label="Navegação principal">
+            <a href="#inicio">Início</a>
+            <a href="#imoveis">Imóveis</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Página inicial -->
+        <section id="inicio" class="hero">
+            <div class="hero-conteudo">
+                <span class="hero-subtitulo">
+                    EXCLUSIVIDADE EM CADA DETALHE
+                </span>
+
+                <h2>Encontre o lugar perfeito para viver.</h2>
+
+                <p>
+                    Imóveis selecionados para quem valoriza
+                    conforto, sofisticação e qualidade de vida.
+                </p>
+
+                <a href="#imoveis" class="btn-principal">
+                    Explorar Imóveis
+                </a>
+            </div>
+        </section>
+
+        <!-- Catálogo de imóveis -->
+        <section id="imoveis">
+            <h2>Imóveis em Destaque</h2>
+
+            <p>
+                Explore nossa seleção demonstrativa
+                de imóveis exclusivos.
+            </p>
+
+            
+<!-- Filtros de imóveis -->
+<div class="filtros-imoveis" aria-label="Filtrar imóveis">
+    <button class="filtro-btn ativo" data-filtro="todos" type="button">
+        Todos
+    </button>
+
+    <button class="filtro-btn" data-filtro="casa" type="button">
+        Casas
+    </button>
+
+    <button class="filtro-btn" data-filtro="apartamento" type="button">
+        Apartamentos
+    </button>
+
+    <button class="filtro-btn" data-filtro="cobertura" type="button">
+        Coberturas
+    </button>
+</div>
+
+<!-- Filtro por preço -->
+<div class="filtro-preco">
+
+    <label for="preco-maximo">
+        Preço máximo:
+    </label>
+
+    <select id="preco-maximo">
+
+        <option value="todos">
+            Qualquer preço
+        </option>
+
+        <option value="1500000">
+            Até R$ 1.500.000
+        </option>
+
+        <option value="2500000">
+            Até R$ 2.500.000
+        </option>
+
+        <option value="4000000">
+            Até R$ 4.000.000
+        </option>
+
+    </select>
+
+</div>
+
+<!-- Mensagem quando nenhum imóvel corresponder aos filtros -->
+<p id="sem-resultados" hidden>
+    🏡 Nenhum imóvel encontrado com esses filtros.
+    Tente outra categoria ou faixa de preço.
+</p>
+
+<!-- Contador de imóveis encontrados -->
+<p id="contador-imoveis" aria-live="polite">
+    3 imóveis encontrados
+</p>
+
+<!-- Botão para limpar os filtros -->
+<button id="limpar-filtros" type="button">
+    Limpar Filtros
+</button>
+
+<div class="lista-imoveis">
+
+    <article class="imovel-card" data-tipo="casa">
+<p class="descricao-imovel" hidden>
+    Residência de alto padrão com arquitetura contemporânea,
+    ambientes amplos, piscina privativa e área de lazer.
+    Ideal para quem procura conforto e exclusividade.
+</p>
+
+        <img src="img/casa luxo.jfif"
+             alt="Casa moderna com piscina">
+
+        <div class="imovel-info">
+            <span class="imovel-tipo">Casa</span>
+            <h3>Casa Moderna com Piscina</h3>
+            <p>📍 Alphaville - SP</p>
+
+            <div class="imovel-detalhes">
+                <span>🛏️ 4 quartos</span>
+                <span>🚿 3 banheiros</span>
+                <span>🚗 3 vagas</span>
+            </div>
+
+            <strong>R$ 2.450.000</strong>
+            <button type="button" class="btn-detalhes">
+                Ver Detalhes
+            </button>
+        </div>
+    </article>
+
+   <article class="imovel-card" data-tipo="apartamento">
+<p class="descricao-imovel" hidden>
+    Apartamento sofisticado com ambientes integrados,
+    acabamentos modernos e excelente aproveitamento
+    dos espaços. Perfeito para uma rotina confortável.
+</p>
+        <img src="img/apartamento.jfif"
+             alt="Apartamento moderno e sofisticado">
+
+        <div class="imovel-info">
+            <span class="imovel-tipo">Apartamento</span>
+            <h3>Apartamento de Alto Padrão</h3>
+            <p>📍 Moema - São Paulo</p>
+
+            <div class="imovel-detalhes">
+                <span>🛏️ 3 quartos</span>
+                <span>🚿 2 banheiros</span>
+                <span>🚗 2 vagas</span>
+            </div>
+
+            <strong>R$ 1.350.000</strong>
+            <button type="button" class="btn-detalhes">
+                Ver Detalhes
+            </button>
+        </div>
+    </article>
+
+   <article class="imovel-card" data-tipo="cobertura">
+<p class="descricao-imovel" hidden>
+    Cobertura exclusiva com terraço privativo,
+    espaços amplos e ambientes elegantes.
+    Uma proposta de moradia que combina
+    sofisticação, privacidade e qualidade de vida.
+</p>
+        <img src="img/cobertura.jfif"
+             alt="Cobertura de luxo com terraço">
+
+        <div class="imovel-info">
+            <span class="imovel-tipo">Cobertura</span>
+            <h3>Cobertura Exclusiva</h3>
+            <p>📍 Jardins - São Paulo</p>
+
+            <div class="imovel-detalhes">
+                <span>🛏️ 4 quartos</span>
+                <span>🚿 4 banheiros</span>
+                <span>🚗 3 vagas</span>
+            </div>
+
+            <strong>R$ 3.800.000</strong>
+            <button type="button" class="btn-detalhes">
+                Ver Detalhes
+            </button>
+        </div>
+    </article>
+
+</div>
+
+        </section>
+
+        <!-- Sobre -->
+        <section id="sobre">
+            <h2>Sobre a Prime Residence</h2>
+
+            <p>
+                A Prime Residence é um conceito de imobiliária
+                premium desenvolvido para apresentar uma
+                experiência moderna de busca por imóveis.
+            </p>
+        </section>
+
+        <!-- Contato -->
+        <section id="contato">
+            <h2>Encontre Seu Próximo Lar</h2>
+
+            <p>
+                Explore nossos imóveis demonstrativos
+                e conheça as possibilidades.
+            </p>
+
+            <button id="btn-contato" type="button">
+                Falar com um Consultor
+            </button>
+        </section>
+
+<!-- Janela de detalhes do imóvel -->
+<div id="modal-imovel" class="modal" hidden>
+
+    <div class="modal-conteudo"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="modal-titulo">
+
+        <button id="fechar-modal"
+                class="fechar-modal"
+                type="button"
+                aria-label="Fechar detalhes">
+            &times;
+        </button>
+
+       
+<!-- Galeria de fotografias do imóvel -->
+<div class="galeria-modal">
+
+    <img id="modal-imagem" src="" alt="">
+
+    <!-- Foto anterior -->
+    <button
+        id="foto-anterior"
+        class="galeria-seta anterior"
+        type="button"
+        aria-label="Fotografia anterior">
+        &#10094;
+    </button>
+
+    <!-- Próxima foto -->
+    <button
+        id="proxima-foto"
+        class="galeria-seta proxima"
+        type="button"
+        aria-label="Próxima fotografia">
+        &#10095;
+    </button>
+
+    <!-- Contador de fotografias -->
+    <span id="contador-fotos" class="contador-fotos">
+        1 / 3
+    </span>
+
+</div>
+
+        <div class="modal-info">
+            <span id="modal-tipo"></span>
+
+            <h2 id="modal-titulo"></h2>
+
+            <p id="modal-localizacao"></p>
+
+            <p id="modal-caracteristicas"></p>
+           <p id="modal-descricao"></p>
+
+
+            <strong id="modal-preco"></strong>
+        </div>
+
+    </div>
+
+</div>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        
+<p class="aviso-demonstrativo">
+    Projeto conceitual desenvolvido para fins de portfólio.
+    Os imóveis, valores e informações apresentados são ilustrativos.
+</p>
+
+        <p>© 2026 Prime Residence</p>
+        <p>Projeto demonstrativo para portfólio.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
